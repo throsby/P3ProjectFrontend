@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -39,15 +44,40 @@
 
 
 .TowerBox {
+  display: flex;
   flex: row;
+  align-content: space-between;
   flex-wrap: wrap;
+  gap: 1%;
+  margin: 10%;
+  border: 2%;
+  width: 75%;
 }
 
 .TowerStack {
-  flex: column;
-  /* height: 20vh; */
-  /* width: 30vh; */
-  /* size: 100px 75px; */
-  border: black solid 2px;
+  border: black solid 1px;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
 }
 
+.Plot {
+  height: 50px;
+  width: 50px;
+  background-color: #618ffb;
+  margin: 3px;
+  padding: 10px;
+  align-content: center;
+}
+
+.Plot:hover {
+  background-color: #90a8df;
+  transition: 0.3s;
+}
+
+h2 {
+  height:50px;
+  width: 50px;
+  font-size: calc(10px + 2vmin);
+  vertical-align: ;
+}

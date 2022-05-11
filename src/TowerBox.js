@@ -4,8 +4,6 @@ import Tower from "./Tower"
 function TowerBox() {
     const [towers, setTowers] = useState([])
     
-    
-
     useEffect(() => {
         async function fetchData() {
             let req = await fetch("http://localhost:9292/towers")

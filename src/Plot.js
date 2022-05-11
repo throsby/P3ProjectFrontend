@@ -1,9 +1,9 @@
 function Plot({plot: [plot, plotIndex]}) {
 
-    console.log(plotIndex, plot)
+    // console.log(plotIndex, plot)
 
     return(
-        <div className={`tower-${plot["tower_id"]} plot-${plotIndex}`}>
+        <div className={`Plot tower-${plot["tower_id"]}-plot-${plotIndex}`}>
         <h2>{`${plotIndex}`}</h2>
         </div>
     )
