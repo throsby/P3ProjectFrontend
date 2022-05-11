@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react"
+import Tower from "./Tower"
 
 function TowerBox() {
-    const [towers, setTowers] = useState({})
+    const [towers, setTowers] = useState([])
+    
+    
 
     useEffect(() => {
         async function fetchData() {
@@ -12,20 +15,12 @@ function TowerBox() {
         fetchData()
     }, [])
 
-    
 
-    for (const key in towers){
-        towers[key].forEach((plot) => {
-            console.log(plot)
-        });
-    }
-    
-    
-    return ( 
-        <div > 
-            {/* {{Object.entries(data)}.forEach((e,i) => {
-                console.log(e)
-            })}   */}
+    return (
+        <div className="TowerBox">
+            {Object.values(towers).map((tower,i) => {
+                return <Tower key={i} tower={[tower, i]}/>
+            })}
         </div>
     )
 }

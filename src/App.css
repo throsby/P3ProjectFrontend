@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+.TowerBox {
+  flex: row;
+  flex-wrap: wrap;
+}
+
+.TowerStack {
+  flex: column;
+  /* height: 20vh; */
+  /* width: 30vh; */
+  /* size: 100px 75px; */
+  border: black solid 2px;
+}
+
