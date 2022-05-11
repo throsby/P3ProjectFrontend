@@ -1,17 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import TowerBox from './TowerBox';
+import Header from './Header'
+import StatBox from './StatBox'
 
-import { useEffect } from "react"
 
 function App() {
-
-  useEffect(() => { async function fetchData() {
-    let req = await fetch("http://localhost:9292/")
-    let res = await req.json()
-    console.log(res)
-    }
-    fetchData()
-  }, [] )
 
   return (
     <div className="App">
@@ -21,6 +15,10 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
       </header>
+      <Header />
+      <TowerBox />
+      <StatBox />
+
     </div>
   );
 }
