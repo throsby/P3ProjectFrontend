@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import Tower from "./Tower"
+import AddTower from "./AddTower"
 
 function TowerBox() {
-    const [towers, setTowers] = useState([])
+    const [towers, setTowers] = useState({})
     
     useEffect(() => {
         async function fetchData() {
@@ -12,13 +13,14 @@ function TowerBox() {
         }
         fetchData()
     }, [])
-
+    
 
     return (
         <div className="TowerBox">
             {Object.values(towers).map((tower,i) => {
                 return <Tower key={i} tower={[tower, i]}/>
             })}
+            <AddTower setTowers={setTowers}/>
         </div>
     )
 }

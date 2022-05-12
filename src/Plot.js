@@ -4,7 +4,7 @@ function Plot({plot: [plot, plotIndex]}) {
 
     return(
         <div className={`Plot tower-${plot["tower_id"]}-plot-${plotIndex}`}>
-        <h2>{`${plotIndex}`}</h2>
+        {/* <h2>{`${plotIndex}`}</h2> */}
         </div>
     )
 }

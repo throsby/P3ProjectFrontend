@@ -8,6 +8,7 @@
   flex-direction: row;
   align-content: space-between;
   flex-wrap: wrap;
+  max-width: calc(11*73.5px);
   gap: 1%;
   margin: 10%;
   border: 2%;
@@ -19,9 +20,8 @@
   border: black solid 1px;
   border-radius: 5px;
   height: 282px;
-  /* width: ; */
   flex-wrap: wrap;
-  align-content: space-between;
+  align-content: space-around;
   justify-content: center;
 }
 
@@ -43,6 +43,21 @@
   transition: 0.3s;
 }
 
+
+.AddTower {
+  height: 35.5px;
+  width: 35.5px;
+  background-color: #618ffb;
+  justify-content: bottom;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.AddTower:hover {
+  cursor: pointer;
+  background-color: #90a8df;
+}
 /* h2 {
   vertical-align: middle;
   text-align: center;
