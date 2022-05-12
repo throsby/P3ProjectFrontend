@@ -3,71 +3,39 @@
   padding: 0;
 }
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
 .TowerBox {
   display: flex;
-  flex: row;
+  flex-direction: row;
   align-content: space-between;
   flex-wrap: wrap;
   gap: 1%;
   margin: 10%;
   border: 2%;
-  width: 75%;
+  width: 100%;
+  height: 600px;
 }
 
 .TowerStack {
   border: black solid 1px;
+  border-radius: 5px;
+  height: 282px;
+  /* width: ; */
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: center;
 }
 
 .Plot {
-  height: 50px;
-  width: 50px;
+  /* Total leg-length is 35px + 4px + 30px = 70px */
+  height: 35.5px;
+  width: 35.5px;
   background-color: #618ffb;
-  margin: 3px;
-  padding: 10px;
-  align-content: center;
+  margin: calc(2 * 2px);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 
 .Plot:hover {
@@ -75,9 +43,10 @@
   transition: 0.3s;
 }
 
-h2 {
+/* h2 {
+  vertical-align: middle;
+  text-align: center;
   height:50px;
   width: 50px;
   font-size: calc(10px + 2vmin);
-  vertical-align: ;
-}
+} */
