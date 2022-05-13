@@ -1,15 +1,11 @@
 import Plot from "./Plot";
+import { useState } from "react";
 
 function Tower({tower: [tower, towerIndex]}) {
 
-    let logging = false
-
-    // console.log(towerIndex, tower)
     
-    // logging ? console.log("* " + "** * ".repeat(3) + " Plots of Tower " + towerIndex + " * " + "** * ".repeat(3)) : console.log()
-    // tower.forEach((plot) => {
-    //     logging ? console.log(plot) : console.log()
-    // });
+    const [ waterDry, setWaterDry ] = useState(true)
+    
     
     
  
@@ -18,7 +14,9 @@ function Tower({tower: [tower, towerIndex]}) {
             {Object.values(tower).map((plot,i) => {
                 return <Plot key={i} plot={[plot, i]}/>
             })}
+            <span className={"water-dry"} onClick={setWaterDry(!waterDry)}>{waterDry ? "⛲️" : "🧪" }</span>
         </div>
+        
     )
 }
 

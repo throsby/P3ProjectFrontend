@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react"
-
 function AddTower({ setTowers }) {
 
     async function handleOnClick() {
