@@ -1,4 +1,6 @@
-function Plot({plot: [plot, plotIndex]}) {
+import React from "react";
+
+function Plot({plot: [plot, plotIndex], waterDry }) {
 
     // console.log(plotIndex, plot)
 
@@ -12,13 +14,11 @@ function Plot({plot: [plot, plotIndex]}) {
         let req = await fetch("http://localhost:9292/add_tower", config)
         let res = await req.json()
         
-        
     }
 
 
-
     return(
-        <div className={`Plot tower-${plot["tower_id"]}-plot-${plotIndex}`}>
+        <div onClick={handleOnClick} className={`Plot tower-${plot["tower_id"]}-plot-${plotIndex}`}>
         </div>
     )
 }

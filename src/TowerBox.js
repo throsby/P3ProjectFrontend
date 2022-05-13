@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Tower from "./Tower"
 import AddTower from "./AddTower"
+import SubtractTower from "./SubtractTower"
 
 function TowerBox() {
     const [towers, setTowers] = useState({})
@@ -16,11 +17,14 @@ function TowerBox() {
     
 
     return (
-        <div className="TowerBox">
+        <div style={{ "--towers": Object.keys(towers).length }} className="TowerBox">
             {Object.values(towers).map((tower,i) => {
                 return <Tower key={i} tower={[tower, i]}/>
             })}
-            <AddTower setTowers={setTowers}/>
+            <div className="addAndSubtract">
+                <AddTower setTowers={setTowers}/>
+                <SubtractTower setTowers={setTowers}/>
+            </div>
         </div>
     )
 }

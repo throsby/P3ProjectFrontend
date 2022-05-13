@@ -3,14 +3,32 @@
   padding: 0;
 }
 
+.Header {
+  vertical-align: middle;
+  background-color: #ccd8f4;
+  height: max(200px, 20vh);
+}
+
+.Header > h1 {
+  padding: 40px 0;
+  font-family: "Macondo", cursive;
+  font-size: 100px;
+  text-align: center;
+}
+
+.Header > h1:hover {
+  color: rgb(21, 65, 2);
+  transition: .5s;
+}
+
 .TowerBox {
   display: flex;
   flex-direction: row;
   align-content: space-between;
   flex-wrap: wrap;
-  max-width: calc(11*73.5px);
+  max-width: calc(13 * 73.5px);
   gap: 2%;
-  margin: max(2vh,5%);
+  margin: 5% 0% 0% 8%;
   border: 2%;
   width: 100%;
   height: 60vh;
@@ -23,6 +41,7 @@
   flex-wrap: wrap;
   align-content: space-around;
   justify-content: center;
+  position: relative;
 }
 
 .Plot {
@@ -31,19 +50,22 @@
   width: 35px;
   /* background-color: #618ffb; */
   /* background-color: white; */
+  
   border: 1px solid #618ffb;
-  margin: calc(2 * 2px);
+  margin: 4px;
   padding: 15px;
   display: flex;
   flex-direction: row;
   justify-items: center;
   align-items: center;
   position: relative;
+  /* bottom: ; */
 }
 
 .Plot:hover {
   /* content:'\A'; */
   /* position: absolute; */
+  /* height: calc(var(--height)); */
   background: #90a8df;
   transition: 2s;
 }
@@ -53,9 +75,11 @@
   height: 35.5px;
   width: 35.5px;
   background-color: #618ffb;
-  /* align-items: ; */
+  position: relative;
+  top: 20px;
   text-align: center;
   border-radius: 100%;  
+  border: 1px solid black;
 }
 
 .AddTower:hover {
@@ -63,19 +87,34 @@
   background-color: #618ffb;
 }
 
-.Header {
-  background-color: #ccd8f4;
-  height: max(200px, 20vh);
-}
-
-.Header > h1 {
-  font-family: "Macondo", cursive;
-  font-size: 100px;
+.SubtractTower {
+  height: 35.5px;
+  width: 35.5px;
+  background-color: #618ffb;
+  position: relative;
+  top: 55px;
   text-align: center;
+  border-radius: 100%;
+  border: 1px solid black;
 }
 
-.Header > h1:hover {
-  color: rgb(21, 65, 2);
+.SubtractTower:hover {
+  cursor: pointer;
+  background-color: #618ffb;
+}
+
+.water-dry {
+  position: relative;
+  height: 35.5px;
+  width: 35.5px;
+  border-radius: 100%;
+  text-align: center;
+  left: -55px;
+  top: 20px;
+  border: 1px solid black;
+}
+
+.addAndSubtract {
+  position: relative;
   
-  transition: .5s;
 }
