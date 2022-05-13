@@ -1,6 +1,6 @@
 function AddTower({ setTowers }) {
 
-    async function handleOnClick() {
+    async function createTower() {
         let config = {
             method: "POST",
             headers: {
@@ -11,13 +11,12 @@ function AddTower({ setTowers }) {
         let res = await req.json()
         // console.log(res)
         // setTowers((prevTowers) => {return Object.assign(prevTowers, res)})
-        setTowers((prevTowers) => {
-            return {...prevTowers, ...res}})
+        setTowers((prevTowers) => { return {...prevTowers, ...res} })
     }   
 
 return (
     <div className="AddTower">
-        <h2 onClick={handleOnClick}> + </h2> 
+        <h2 onClick={createTower}> + </h2> 
     </div>
 )
 

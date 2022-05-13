@@ -1,6 +1,9 @@
+import { useEffect } from "react"
+
 function SubtractTower({ setTowers }) {
 
-    async function handleOnClick() {
+    async function deleteTower() {
+        
         let config = {
             method: "DELETE",
             headers: {
@@ -12,16 +15,13 @@ function SubtractTower({ setTowers }) {
         // console.log(res)
         // setTowers((prevTowers) => {return Object.assign(prevTowers, res)})
         setTowers((prevTowers) => {
-            
-            
-            
             return {...res}
         })
     }
 
     return (
         <div className="SubtractTower">
-            <h2 onClick={handleOnClick}> - </h2>
+            <h2 onClick={deleteTower}>-</h2>
         </div>
     )
 }

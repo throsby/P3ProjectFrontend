@@ -2,15 +2,20 @@ import { useEffect, useState } from "react"
 import Tower from "./Tower"
 import AddTower from "./AddTower"
 import SubtractTower from "./SubtractTower"
+import WaterDry from "./WaterDry"
 
 function TowerBox() {
     const [towers, setTowers] = useState({})
-    
+    const [waterDry, setWaterDry] = useState(true)
+
+
+
     useEffect(() => {
         async function fetchData() {
             let req = await fetch("http://localhost:9292/towers")
             let res = await req.json()
             setTowers(res)
+           
         }
         fetchData()
     }, [])
@@ -19,11 +24,12 @@ function TowerBox() {
     return (
         <div style={{ "--towers": Object.keys(towers).length }} className="TowerBox">
             {Object.values(towers).map((tower,i) => {
-                return <Tower key={i} tower={[tower, i]}/>
+                return <Tower key={i} tower={[tower, i]} waterDry={waterDry} />
             })}
-            <div className="addAndSubtract">
-                <AddTower setTowers={setTowers}/>
-                <SubtractTower setTowers={setTowers}/>
+            <div className={"snapLeft"}>
+                <WaterDry setWaterDry={setWaterDry} waterDry={waterDry} />
+                <AddTower setTowers={setTowers} />
+                <SubtractTower setTowers={setTowers} />
             </div>
         </div>
     )

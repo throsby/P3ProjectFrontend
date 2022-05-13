@@ -67,9 +67,19 @@
   /* position: absolute; */
   /* height: calc(var(--height)); */
   background: #90a8df;
+  transition: all 1s;
+}
+
+
+h4 {
+  display: none;
   transition: 2s;
 }
 
+.Plot:hover h4 {
+  display: block;
+  transition: all 2s;
+}
 
 .AddTower {
   height: 35.5px;
@@ -84,7 +94,8 @@
 
 .AddTower:hover {
   cursor: pointer;
-  background-color: #618ffb;
+  background-color: #ccd8f4;
+  transition: .5s;
 }
 
 .SubtractTower {
@@ -100,21 +111,31 @@
 
 .SubtractTower:hover {
   cursor: pointer;
-  background-color: #618ffb;
+  background-color: #ccd8f4;
+  transition: .5s;
 }
 
 .water-dry {
-  position: relative;
+  position: absolute;
   height: 35.5px;
   width: 35.5px;
   border-radius: 100%;
   text-align: center;
-  left: -55px;
-  top: 20px;
+  background-color: #ccd8f4;
+  /* left: -55px;*/
+  top: -50px;
+  /* top: 100%; */
   border: 1px solid black;
 }
 
-.addAndSubtract {
-  position: relative;
-  
+.water-dry:hover {
+  cursor: pointer;
+  background-color: #618ffb;
+  transition: .5s;
+}
+
+.snapLeft {
+  position: absolute;
+  left: 85px;
+  top: 435px;
 }
