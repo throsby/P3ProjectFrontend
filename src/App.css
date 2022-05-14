@@ -34,6 +34,7 @@
   height: 60vh;
 }
 
+
 .TowerStack {
   border: black solid 1px;
   border-radius: 5px;
@@ -42,6 +43,11 @@
   align-content: space-around;
   justify-content: center;
   position: relative;
+}
+
+.helpers {
+  position: relative;
+  top: 140px;
 }
 
 .Plot {
@@ -62,14 +68,17 @@
   /* bottom: ; */
 }
 
-.Plot:hover {
-  /* content:'\A'; */
-  /* position: absolute; */
-  /* height: calc(var(--height)); */
+.Plot.wateringcan:hover {
+  cursor: pointer;
   background: #90a8df;
   transition: all 1s;
 }
 
+.Plot.sample:hover {
+  cursor: pointer;
+  background: #90a8df;
+  transition: all 1s;
+}
 
 h4 {
   display: none;
@@ -79,6 +88,10 @@ h4 {
 .Plot:hover h4 {
   display: block;
   transition: all 2s;
+}
+
+.Plot.green-me {
+  background-color: rgb(78, 130, 1);
 }
 
 .AddTower {
@@ -112,6 +125,23 @@ h4 {
 .SubtractTower:hover {
   cursor: pointer;
   background-color: #ccd8f4;
+  transition: .5s;
+}
+
+.harvest-plant {
+  position: absolute;
+  height: 35.5px;
+  width: 35.5px;
+  border-radius: 100%;
+  text-align: center;
+  background-color: #ccd8f4;
+  top: -120px;
+  border: 1px solid black;
+}
+
+.harvest-plant:hover {
+  cursor: pointer;
+  background-color: #618ffb;
   transition: .5s;
 }
 
